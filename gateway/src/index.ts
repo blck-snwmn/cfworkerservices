@@ -1,5 +1,6 @@
 
 export interface Env {
+	app: Fetcher
 }
 
 export default {
@@ -8,6 +9,7 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<Response> {
-		return new Response("Hello World!");
+		console.log("gateway")
+		return env.app.fetch(request.clone());
 	},
 };

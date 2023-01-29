@@ -7,6 +7,7 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<Response> {
-		return new Response("Hello World!");
+		console.log("app")
+		return new Response("Hello Services!");
 	},
 };
